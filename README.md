@@ -50,7 +50,7 @@ sequenceDiagram
     ClientApplication->>AuthServer: 1. I want to access protected resources. Here are my client credentials. No user involved in this.
     AuthServer->>ClientApplication: 2. Hey client, The credentials provided are correct. Here is the ACCESS TOKEN to access the protected resources.
     ClientApplication->>ResourceServerApplication: 3. Hey Resource Server, I want to access a protected resources. Here is the access token issued by Auth Server
-    ResourceServerApplication->>Client: 4. Hey Client, Your token is validated successfully, Here are the resources you requested.
+    ResourceServerApplication->>ClientApplication: 4. Hey Client, Your token is validated successfully, Here are the resources you requested.
 ```
 
 > [!IMPORTANT]
