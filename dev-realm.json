@@ -1,0 +1,54 @@
+{
+  "realm": "dev",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "admin-client-application",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "secret": "admin-secret-change-me",
+      "publicClient": false,
+      "attributes": { "access.token.lifespan": "3600" },
+      "serviceAccountsEnabled": true,
+      "clientAuthenticatorType": "client-secret"
+    },
+    {
+      "clientId": "user-client-application",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "secret": "user-secret-change-me",
+      "publicClient": false,
+      "attributes": { "access.token.lifespan": "3600" },
+      "serviceAccountsEnabled": true,
+      "clientAuthenticatorType": "client-secret"
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "id": "admin-role-id",
+        "name": "ADMIN",
+        "description": "Admin role"
+      },
+      {
+        "id": "user-role-id",
+        "name": "USER",
+        "description": "User role"
+      }
+    ]
+  },
+  "users": [
+    {
+      "username": "admin-client-application",
+      "enabled": true,
+      "serviceAccountClientId": "admin-client-application",
+      "realmRoles": ["ADMIN"]
+    },
+    {
+      "username": "user-client-application",
+      "enabled": true,
+      "serviceAccountClientId": "user-client-application",
+      "realmRoles": ["USER"]
+    }
+  ]
+}
