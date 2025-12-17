@@ -19,19 +19,19 @@ Client Credentials Grant Type flow implementation with Spring Security and KeyCl
 git clone https://github.com/sevketbuyukdemir/oauth2-client-credentials.git
 ```
 2. Run KeyCloak via Docker Desktop
-- To create KeyCloak container for the first time.
+- Create and start Keycloak container for the first time:
 ```
 docker-compose up -d
 ```
-- To start the existing KeyCloak container
+- Start an existing Keycloak container:
 ```
 docker-compose start
 ```
-- To stop the KeyCloak container
+- Stop the running Keycloak container:
 ```
 docker-compose stop
 ```
-- To start from fresh point
+- Perform a clean restart (stops containers and removes volumes):
 ```
 docker-compose down -v
 ```
